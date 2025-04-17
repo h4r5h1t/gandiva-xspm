@@ -1,0 +1,62 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: gandiva-frontend
+    networks:
+      - gandiva-network
+    ports:
+      - 8080:8080
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: gandiva-backend
+    networks:
+      - gandiva-network
+    ports:
+      - 5000:5000
+    environment:
+      MONGO_URI: mongodb://mongo:27017/
+    volumes:
+      - ~/.aws:/home/appuser/.aws:ro
+      - ~/.aws:/root/.aws:ro
+      - ~/.kube:/home/appuser/.kube:ro
+      - ~/.kube:/root/.kube:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - mongo
+      - neo4j
+
+  mongo:
+    image: mongo:latest
+    container_name: gandiva-mongo
+    networks:
+      - gandiva-network
+    ports:
+      - 27017:27017
+
+  neo4j:
+    image: neo4j:latest
+    container_name: gandiva-neo4j
+    networks:
+      - gandiva-network
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      NEO4J_AUTH: neo4j/password
+      NEO4JLABS_PLUGINS: '["apoc"]'
+    volumes:
+      - neo4j_data:/data
+
+networks:
+  gandiva-network:
+    driver: bridge
+
+volumes:
+  neo4j_data:
