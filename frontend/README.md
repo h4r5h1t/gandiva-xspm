@@ -1,8 +1,8 @@
-# Gandiva Extended Security Posture Management (xSPM) - Frontend
+# 🚀 Gandiva Extended Security Posture Management (xSPM) - Frontend
 
 This is the frontend application for the Gandiva Extended Security Posture Management (xSPM) tool. It provides a modern, responsive user interface for monitoring and managing cloud security posture across multiple cloud platforms and services.
 
-## Architecture
+## 🏗️ Architecture
 
 The frontend is built using:
 - React with TypeScript
@@ -15,7 +15,7 @@ The frontend is built using:
 - React Flow for graph visualization
 - Sonner for toast notifications
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 frontend/
@@ -42,9 +42,9 @@ frontend/
 └── vite.config.ts       # Vite configuration
 ```
 
-## Key Components
+## 🔑 Key Components
 
-### Pages
+### 📄 Pages
 
 - **Graph**: Neo4j graph visualization of cloud resources and relationships
 - **AssetInventory**: Comprehensive view of cloud resources
@@ -62,7 +62,7 @@ frontend/
 - **AdminDashboard**: Admin panel for system management
 - **Login**: User authentication
 
-### Components
+### 🧩 Components
 
 - **TopNavBar**: Main navigation and user controls
 - **GraphVisualizer**: Neo4j graph visualization component
@@ -74,7 +74,7 @@ frontend/
 - **ProtectedRoute**: Authentication wrapper for protected routes
 - **LoginForm**: Form component for user authentication
 
-### Services
+### 🔌 Services
 
 - **authService**: Authentication and token management
 - **graphService**: Neo4j graph data fetching
@@ -83,7 +83,7 @@ frontend/
 - **scanningService**: Vulnerability scanning operations
 - **benchmarkService**: Security benchmark assessment
 
-## Features
+## ✨ Features
 
 - **Interactive Graph Visualization**: Visualize cloud resources and their relationships
 - **Asset Inventory**: Comprehensive view of all cloud resources
@@ -96,14 +96,14 @@ frontend/
 - **Dark/Light Mode**: UI theme support
 - **Responsive Design**: Works on desktop and mobile devices
 
-## Development
+## 💻 Development
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Node.js v18 or later
 - npm, yarn, or bun
 
-### Setup
+### ⚙️ Setup
 
 1. Clone the repository
 2. Navigate to the frontend directory
@@ -120,7 +120,7 @@ frontend/
    VITE_API_URL=http://localhost:5000/api/v1
    ```
 
-### Running Locally
+### 🚀 Running Locally
 
 ```
 npm run dev
@@ -132,7 +132,7 @@ bun run dev
 
 This will start the development server at http://localhost:3000.
 
-### Building for Production
+### 📦 Building for Production
 
 ```
 npm run build
@@ -140,7 +140,7 @@ npm run build
 
 This creates a `dist` directory with production-ready files.
 
-## API Integration
+## 🔌 API Integration
 
 The frontend communicates with the backend through REST API endpoints. Key endpoint categories include:
 
@@ -156,7 +156,7 @@ The frontend communicates with the backend through REST API endpoints. Key endpo
 
 API requests are made using Axios, with authentication handled automatically through interceptors that refresh tokens when needed.
 
-## Authentication
+## 🔐 Authentication
 
 This application uses JWT token-based authentication:
 
@@ -167,7 +167,7 @@ This application uses JWT token-based authentication:
 
 See [README-AUTH.md](./README-AUTH.md) for detailed authentication implementation.
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
 - **API Connection Issues**: Ensure the backend server is running and the `VITE_API_URL` is correctly set in the `.env` file.
 - **Authentication Problems**: Check if tokens are expired, try clearing local storage and logging in again.

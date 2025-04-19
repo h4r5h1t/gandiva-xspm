@@ -1,12 +1,12 @@
-# Authentication Implementation Guide
+# 🔐 Authentication Implementation Guide
 
 This document explains how authentication is implemented in the Gandiva xSPM frontend application.
 
-## Overview
+## 📋 Overview
 
 The frontend authenticates with the Flask backend using JWT (JSON Web Token) authentication. When a user logs in, they receive an access token and a refresh token, which are stored in the browser's local storage. The access token is used for authenticating API requests, while the refresh token is used to obtain a new access token when the current one expires.
 
-## Components
+## 🧩 Components
 
 1. **Authentication Service**: `src/services/auth.ts`
    - Handles login, logout, and token management functions
@@ -36,16 +36,16 @@ The frontend authenticates with the Flask backend using JWT (JSON Web Token) aut
    - Provides logout functionality
    - Shows appropriate options based on user role
 
-## Implementation Details
+## 🔧 Implementation Details
 
-### Token Storage
+### 🔑 Token Storage
 
 Tokens are stored in the browser's local storage:
 - `access_token`: Short-lived JWT for API authentication
 - `refresh_token`: Longer-lived JWT for obtaining new access tokens
 - `user_info`: Basic user information (username, role, etc.)
 
-### Authentication Flow
+### 🔄 Authentication Flow
 
 1. **Login Process**:
    ```
@@ -67,16 +67,16 @@ Tokens are stored in the browser's local storage:
    User clicks logout → Tokens sent to backend for invalidation → Tokens removed from storage → Redirect to login
    ```
 
-### Role-Based Access Control
+### 👥 Role-Based Access Control
 
 The application implements role-based access control:
 - `admin`: Full access to all features
 - `user`: Limited access to dashboard and reporting features
 - Additional roles can be configured as needed
 
-## Code Examples
+## 💻 Code Examples
 
-### Authentication Service
+### 🔌 Authentication Service
 
 ```typescript
 import axios from 'axios';
@@ -171,7 +171,7 @@ export const hasRole = (requiredRole) => {
 };
 ```
 
-### Protected Route Component
+### 🛡️ Protected Route Component
 
 ```tsx
 import React from 'react';
@@ -192,7 +192,7 @@ const ProtectedRoute = ({ children }) => {
 export default ProtectedRoute;
 ```
 
-## Security Considerations
+## 🔒 Security Considerations
 
 1. **Token Storage**:
    - Tokens are stored in local storage, which is vulnerable to XSS attacks
@@ -215,9 +215,9 @@ export default ProtectedRoute;
    - Don't expose sensitive information in error messages
    - Implement proper logging for authentication failures
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
-### Common Issues
+### ❌ Common Issues
 
 1. **"Authentication Required" message appears repeatedly**:
    - Check if the backend is running and accessible
@@ -240,7 +240,7 @@ export default ProtectedRoute;
    - Check if role-based restrictions are properly implemented
    - Try logging out and logging back in
 
-### Debugging Tools
+### 🔍 Debugging Tools
 
 1. **Browser Developer Tools**:
    - Application tab → Local Storage: Check if tokens are stored
@@ -255,7 +255,7 @@ export default ProtectedRoute;
    - Check the backend authentication logs for errors
    - Monitor failed login attempts
 
-## Future Improvements
+## 🚀 Future Improvements
 
 1. **Multi-factor Authentication**:
    - Implement MFA for additional security

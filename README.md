@@ -1,5 +1,9 @@
-
 # Gandiva: Extended Security Posture Management (xSPM)
+
+<p align="center">
+  <img src="./assets/logo.png" alt="Gandiva-xSPM" width="300"/>
+</p>
+
 > ⚠️ **Note:** This project was originally forked from [`shashvik/gandiva-xspm`](https://github.com/shashvik/gandiva-xspm), but that repository has since been deleted. This repository is now maintained independently. Major parts of the original codebase were authored by [shashvik](https://github.com/shashvik). Credit goes to him for the core architecture and initial implementation.
 
 Gandiva is an advanced Extended Security Posture Management (xSPM) platform designed to help organizations monitor, assess, and improve their cloud security posture across multi-cloud environments. It offers deep visibility into cloud assets, detects security issues, and provides actionable remediation guidance.
@@ -20,6 +24,7 @@ Gandiva is an advanced Extended Security Posture Management (xSPM) platform desi
   - [Kubernetes Configuration](#kubernetes-configuration)
 - [Security Considerations](#security-considerations)
 - [Documentation](#documentation)
+- [Screenshots](#screenshots)
 - [Contributors](#contributors)
 
 ## 🚀 How to Deploy
@@ -156,6 +161,41 @@ Ensure your `~/.kube/config` file is properly configured and has access to your 
 - [Backend Documentation](./backend/README.md)
 - [Frontend Documentation](./frontend/README.md)
 - [Authentication Guide](./frontend/README-AUTH.md)
+
+## 📸 Screenshots
+
+### Login Page
+![Login PageOverview](./assets/login-page.png)
+
+### Dashboard Overview
+![Dashboard Overview](./assets/dashboard-overview.png)
+
+### Commpliance Dashboard
+![Commpliance Dashboard](./assets/compliance-dashboard.png)
+
+### Commpliance Details
+![Commpliance Details](./assets/cis-compliance-details.png)
+
+### Graph Visualization
+![Graph Visualization](./assets/graph-visualization.png)
+
+### Asset Inventory
+![Asset Inventory](./assets/asset-inventory.png)
+
+### Asset Details
+![Asset Details](./assets/asset-details.png)
+
+### Security Controls
+![Security Controls](./assets/security-controls.png)
+
+### Security Controls Details
+![Security Controls Details](./assets/security-controls-details.png)
+
+### Data Security
+![Data Security](./assets/data-security.png)
+
+### Data Security - S3 Bucket
+![Data Security (S3)](./assets/data-security-s3.png)
 
 ## 👥 Contributors
 
