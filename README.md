@@ -4,8 +4,6 @@
   <img src="./assets/logo.png" alt="Gandiva-xSPM" width="300"/>
 </p>
 
-> ⚠️ **Note:** This project was originally forked from [`shashvik/gandiva-xspm`](https://github.com/shashvik/gandiva-xspm), but that repository has since been deleted. This repository is now maintained independently. Major parts of the original codebase were authored by [shashvik](https://github.com/shashvik). Credit goes to him for the core architecture and initial implementation.
-
 Gandiva is an advanced Extended Security Posture Management (xSPM) platform designed to help organizations monitor, assess, and improve their cloud security posture across multi-cloud environments. It offers deep visibility into cloud assets, detects security issues, and provides actionable remediation guidance.
 
 ## 📚 Table of Contents
@@ -198,17 +196,8 @@ Ensure your `~/.kube/config` file is properly configured and has access to your 
 ![Data Security (S3)](./assets/data-security-s3.png)
 
 ## 👥 Contributors
-
-<a href="https://github.com/shashvik">
-  <img src="https://avatars.githubusercontent.com/shashvik" width="60px;" alt="shashvik"/>
-  <br />
-  <sub><b>shashvik</b></sub>
-</a>
-
 <a href="https://github.com/h4r5h1t">
   <img src="https://avatars.githubusercontent.com/h4r5h1t" width="60px;" alt="h4r5h1t"/>
   <br />
   <sub><b>h4r5h1t</b></sub>
-</a>
-
-> Special thanks to **@shashvik** for the original groundwork. This project is now independently maintained and developed by **@h4r5h1t**.
+</a> 
