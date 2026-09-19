@@ -127,7 +127,7 @@ gandiva/
 │   │   ├── pages/        # Page components
 │   │   └── services/     # API services
 │   └── public/           # Static assets
-├── docker-compose.yml    # Docker Compose configuration
+├── docker-compose.yaml    # Docker Compose configuration
 └── Dockerfile.*          # Docker build configurations
 ```
 
@@ -200,4 +200,4 @@ Ensure your `~/.kube/config` file is properly configured and has access to your 
   <img src="https://avatars.githubusercontent.com/h4r5h1t" width="60px;" alt="h4r5h1t"/>
   <br />
   <sub><b>h4r5h1t</b></sub>
-</a> 
+</a>
